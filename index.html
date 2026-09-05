@@ -1,0 +1,596 @@
+
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Osaka & Kyoto Trip — 6–14 Dec 2026</title>
+  <style>
+    :root{
+      --bg:#f7f7f5; --card:#ffffff; --text:#171717; --muted:#6b6b6b;
+      --line:#e8e8e5; --accent:#1f6f5f; --accent2:#f0f7f4; --chip:#f1f1ee;
+      --warn:#fff6df; --shadow:0 10px 30px rgba(0,0,0,.07);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI","Noto Sans Thai","Helvetica Neue",Arial,sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.55;
+    }
+    a{color:inherit}
+    .hero{
+      min-height:52vh; display:flex; align-items:flex-end;
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.62)),
+        url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1800&q=85') center/cover;
+      color:white; padding:48px 24px;
+    }
+    .hero .wrap{width:min(1180px,100%); margin:auto}
+    .eyebrow{font-size:13px; letter-spacing:.14em; text-transform:uppercase; opacity:.85}
+    h1{font-size:clamp(34px,6vw,72px); line-height:1.03; margin:8px 0 12px}
+    .hero p{font-size:clamp(16px,2vw,21px); max-width:760px; margin:0; opacity:.94}
+    .topnav{
+      position:sticky; top:0; z-index:50; background:rgba(247,247,245,.94);
+      backdrop-filter:blur(14px); border-bottom:1px solid var(--line);
+    }
+    .topnav .inner{width:min(1180px,100%); margin:auto; padding:10px 16px; display:flex; gap:8px; overflow:auto}
+    .topnav a{
+      text-decoration:none; white-space:nowrap; background:var(--card); border:1px solid var(--line);
+      border-radius:999px; padding:8px 12px; font-size:13px;
+    }
+    .topnav a:hover{background:var(--accent2); border-color:#cce3da}
+    main{width:min(1180px,100%); margin:auto; padding:28px 16px 80px}
+    .summary{
+      display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:0 0 28px;
+    }
+    .mini{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:18px; box-shadow:var(--shadow)}
+    .mini .k{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em}
+    .mini .v{font-size:20px; font-weight:750; margin-top:4px}
+    .hotel-strip{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:32px;
+    }
+    .hotel{
+      background:linear-gradient(135deg,#fff,#f5f7f6); border:1px solid var(--line);
+      border-radius:20px; padding:18px;
+    }
+    .hotel b{font-size:18px}
+    .hotel small{display:block;color:var(--muted);margin-top:4px}
+    .day{
+      scroll-margin-top:76px; background:var(--card); border:1px solid var(--line);
+      border-radius:28px; overflow:hidden; margin:26px 0; box-shadow:var(--shadow);
+    }
+    .dayhead{display:grid; grid-template-columns:1.1fr .9fr; min-height:270px}
+    .daytitle{padding:30px}
+    .daynum{font-size:13px;color:var(--accent);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .daytitle h2{font-size:clamp(28px,4vw,44px);line-height:1.08;margin:8px 0 10px}
+    .date{color:var(--muted);font-weight:650}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .chip{background:var(--chip);border-radius:999px;padding:7px 10px;font-size:12px}
+    .dayimg{min-height:240px;background-size:cover;background-position:center}
+    .content{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;padding:24px}
+    .timeline{border-left:2px solid #dfe7e3;padding-left:20px}
+    .step{position:relative;padding:0 0 22px}
+    .step:before{
+      content:""; position:absolute; left:-27px; top:6px; width:12px; height:12px;
+      background:var(--accent); border-radius:50%; box-shadow:0 0 0 5px #eaf5f1;
+    }
+    .time{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .step h3{margin:4px 0 6px;font-size:19px}
+    .step p{margin:0;color:#404040}
+    .routebox,.infobox{
+      background:#fafafa;border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:14px
+    }
+    .routebox h4,.infobox h4{margin:0 0 10px;font-size:16px}
+    .route{display:flex;flex-direction:column;gap:7px;font-size:14px}
+    .arrow{color:#9a9a9a;padding-left:8px}
+    .station{font-weight:700}
+    .note{background:var(--warn);border:1px solid #f2dfaa;border-radius:16px;padding:12px 14px;font-size:13px}
+    .mapbtn{
+      display:inline-block;text-decoration:none;background:var(--accent);color:#fff;padding:10px 13px;
+      border-radius:12px;font-size:13px;font-weight:750;margin-top:10px
+    }
+
+    .gallery{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
+      margin:4px 24px 24px;
+    }
+    .photo{
+      position:relative; min-height:185px; border-radius:18px; overflow:hidden;
+      background:#eee; border:1px solid var(--line);
+    }
+    .photo img{
+      width:100%; height:100%; min-height:185px; object-fit:cover; display:block;
+      transition:transform .25s ease;
+    }
+    .photo:hover img{transform:scale(1.025)}
+    .caption{
+      position:absolute; left:0; right:0; bottom:0; padding:28px 12px 10px;
+      color:#fff; font-size:13px; font-weight:750;
+      background:linear-gradient(transparent,rgba(0,0,0,.72));
+    }
+
+    .checklist{display:grid;gap:8px;font-size:13px}
+    .check{display:flex;gap:8px;align-items:flex-start}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:7px;flex:0 0 auto}
+    footer{color:var(--muted);font-size:12px;text-align:center;padding-top:16px}
+    @media(max-width:850px){
+      .summary{grid-template-columns:1fr 1fr}
+      .hotel-strip{grid-template-columns:1fr}
+      .dayhead,.content{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+      .dayimg{order:-1; min-height:210px}
+    }
+    @media(max-width:520px){
+      .summary{grid-template-columns:1fr 1fr}
+      .mini{padding:14px}
+      .mini .v{font-size:17px}
+      .content,.daytitle{padding:18px}
+      .day{border-radius:20px}
+      .gallery{grid-template-columns:1fr; margin:4px 18px 18px}
+      .hero{padding:36px 18px}
+    }
+    @media print{
+      .topnav{display:none}
+      .hero{min-height:280px}
+      .day{break-inside:avoid;box-shadow:none}
+      body{background:white}
+    }
+  </style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Japan Winter Trip • 9 Days / 8 Nights</div>
+    <h1>Osaka & Kyoto<br>6–14 Dec 2026</h1>
+    <p>แผนเที่ยวแบบเปิดดูง่ายบนมือถือ เน้นสถานีที่ต้องลง วิธีต่อรถ จุดเที่ยว โรงแรม และช่วงเวลาของแต่ละวัน</p>
+  </div>
+</header>
+
+<nav class="topnav">
+  <div class="inner">
+    <a href="#overview">Overview</a>
+    <a href="#d1">Day 1</a><a href="#d2">Day 2</a><a href="#d3">Day 3</a>
+    <a href="#d4">Day 4</a><a href="#d5">Day 5</a><a href="#d6">Day 6</a>
+    <a href="#d7">Day 7</a><a href="#d8">Day 8</a><a href="#d9">Day 9</a>
+  </div>
+</nav>
+
+<main>
+  <section id="overview" class="summary">
+    <div class="mini"><div class="k">Trip</div><div class="v">9 Days / 8 Nights</div></div>
+    <div class="mini"><div class="k">Flight Out</div><div class="v">TG672 • 08:15</div></div>
+    <div class="mini"><div class="k">Flight Back</div><div class="v">TG673 • 17:25</div></div>
+    <div class="mini"><div class="k">Style</div><div class="v">Train + Walk</div></div>
+  </section>
+
+  <section class="hotel-strip">
+    <div class="hotel"><b>6–9 Dec • Umeda</b><small>3 คืน • แนะนำ Hotel Hankyu RESPIRE Osaka / โรงแรมใกล้ JR Osaka Station</small></div>
+    <div class="hotel"><b>9–12 Dec • Kyoto Station</b><small>3 คืน • แนะนำ Miyako City Kintetsu Kyoto Station</small></div>
+    <div class="hotel"><b>12–14 Dec • Namba</b><small>2 คืน • แนะนำ Hiyori Hotel Osaka Namba Station</small></div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="day" id="d1">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 1</div>
+        <h2>Bangkok → Osaka Umeda</h2>
+        <div class="date">Sunday • 6 Dec 2026</div>
+        <div class="chips"><span class="chip">✈️ TG672</span><span class="chip">🚆 KIX → Osaka</span><span class="chip">🏨 Umeda</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">08:15–15:45</div><h3>TG672 • BKK → KIX</h3><p>ถึง Kansai International Airport Terminal 1 แล้วผ่าน Immigration / รับกระเป๋า / Customs</p></div>
+        <div class="step"><div class="time">~17:00</div><h3>KIX → Osaka Station</h3><p>เดินตามป้าย Railways ไป <b>Kansai-airport Station</b> แล้วใช้ JR ไป <b>Osaka Station</b>. ถ้ารอบเหมาะเลือก HARUKA; ถ้าไม่เหมาะใช้ Kansai Airport Rapid</p></div>
+        <div class="step"><div class="time">~18:30</div><h3>Check-in Umeda</h3><p>จาก JR Osaka Station เดินไปโรงแรมบริเวณ Umeda / LINKS UMEDA</p></div>
+        <div class="step"><div class="time">19:15–21:30</div><h3>Dinner + Umeda Walk</h3><p>LUCUA / LINKS / Grand Front / Grand Green Osaka แล้วกลับพักเร็ว</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Route</h4><div class="route">
+          <div class="station">KIX Terminal 1</div><div class="arrow">↓ เดินไป Railway</div>
+          <div class="station">Kansai-airport Station</div><div class="arrow">↓ JR</div>
+          <div class="station">Osaka Station</div><div class="arrow">↓ เดิน</div>
+          <div class="station">Umeda Hotel</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Osaka+Station">เปิด Osaka Station</a></div>
+        <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Umeda คืนที่ 1/3</b><br>Hotel Hankyu RESPIRE Osaka หรือโรงแรมใกล้ JR Osaka Station</p></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day" id="d2">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 2</div>
+        <h2>Katsuoji → Hakugintei → Hikari</h2>
+        <div class="date">Monday • 7 Dec 2026</div>
+        <div class="chips"><span class="chip">🍁 Katsuoji</span><span class="chip">🍛 Curry</span><span class="chip">🍓 Cafe</span><span class="chip">🏨 Umeda</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">07:50</div><h3>Umeda → Minoh-kayano</h3><p>ขึ้น <b>Osaka Metro Midosuji Line</b> จาก Umeda ไปลง <b>Minoh-kayano</b> แบบไม่ต้องเปลี่ยนสาย</p></div>
+        <div class="step"><div class="time">~09:00</div><h3>Bus → Katsuoji</h3><p>ต่อ Hankyu Bus ไปป้าย <b>Katsuoji</b>. เที่ยววัดประมาณ 09:30–11:40</p></div>
+        <div class="step"><div class="time">~12:30</div><h3>Minoh-kayano → Hommachi</h3><p>นั่ง Midosuji Line กลับลง <b>Hommachi</b></p></div>
+        <div class="step"><div class="time">13:30–14:15</div><h3>Hakugintei</h3><p>กิน Japanese curry สาขา Itoh Building บริเวณ Hommachi</p></div>
+        <div class="step"><div class="time">14:30–16:00</div><h3>Fruit Cafe Hikari</h3><p>เดินต่อประมาณ 5–10 นาที แล้วกลับ Umeda ด้วย Midosuji Line</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Route</h4><div class="route">
+          <div class="station">Umeda M16</div><div class="arrow">↓ Midosuji Line</div>
+          <div class="station">Minoh-kayano M06</div><div class="arrow">↓ Bus</div>
+          <div class="station">Katsuoji</div><div class="arrow">↓ Bus + Metro</div>
+          <div class="station">Hommachi M18</div><div class="arrow">↓ Walk</div>
+          <div class="station">Hakugintei → Hikari</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Katsuoji+Temple">เปิด Katsuoji</a></div>
+        <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Umeda คืนที่ 2/3</b></p></div>
+      </aside>
+    </div>
+  
+    <div class="gallery">
+      <a class="photo" target="_blank" href="https://maido-bob.osaka/en/spot/katsuoji-temple/">
+        <img loading="lazy" src="https://maido-bob.osaka/wp-content/uploads/2020/06/Katsuoji-temple_01.jpg" onerror="this.src='https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1000&q=80'" alt="Katsuoji Temple">
+        <span class="caption">Katsuoji Temple • 勝尾寺</span>
+      </a>
+      <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Katsuoji+Temple">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1000&q=80" alt="Autumn temple scenery">
+        <span class="caption">Autumn Temple Scenery</span>
+      </a>
+    </div>
+
+</section>
+
+  <!-- DAY 3 -->
+  <section class="day" id="d3">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 3</div>
+        <h2>Universal Studios Japan</h2>
+        <div class="date">Tuesday • 8 Dec 2026</div>
+        <div class="chips"><span class="chip">🎢 USJ</span><span class="chip">🍄 Nintendo</span><span class="chip">🪄 Harry Potter</span><span class="chip">🏨 Umeda</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">~06:40</div><h3>Hotel → JR Osaka Station</h3><p>เดินจาก Umeda ไป JR Osaka Station</p></div>
+        <div class="step"><div class="time">~07:00</div><h3>Osaka → Universal City</h3><p>JR Osaka Loop Line → <b>Nishikujo</b> → เปลี่ยน JR Yumesaki Line → <b>Universal City</b>. ถ้ามี direct train นั่งยาวได้เลย</p></div>
+        <div class="step"><div class="time">Morning</div><h3>Super Nintendo World</h3><p>เน้น Mario Kart / Yoshi / Donkey Kong ตาม Express Pass และ timed entry</p></div>
+        <div class="step"><div class="time">Afternoon–Night</div><h3>Harry Potter + Seasonal Attractions</h3><p>เที่ยวเต็มวัน แล้วกลับเส้นเดิม Universal City → Nishikujo → Osaka</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Route</h4><div class="route">
+          <div class="station">Osaka Station</div><div class="arrow">↓ Osaka Loop Line</div>
+          <div class="station">Nishikujo</div><div class="arrow">↓ Yumesaki Line</div>
+          <div class="station">Universal City</div><div class="arrow">↓ Walk 5 min</div>
+          <div class="station">USJ</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan">เปิด USJ</a></div>
+        <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Umeda คืนที่ 3/3</b><br>คืนนี้จัดกระเป๋า เพราะพรุ่งนี้ย้าย Kyoto</p></div>
+      </aside>
+    </div>
+  
+    <div class="gallery">
+      <a class="photo" target="_blank" href="https://www.usj.co.jp/">
+        <img loading="lazy" src="https://preparetravelplans.com/wp-content/uploads/2024/05/2a-Major-Attractions-UVT.jpg" alt="Super Nintendo World USJ">
+        <span class="caption">Super Nintendo World • USJ</span>
+      </a>
+      <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&w=1000&q=80" alt="Theme park">
+        <span class="caption">Universal Studios Japan</span>
+      </a>
+    </div>
+
+</section>
+
+  <!-- DAY 4 -->
+  <section class="day" id="d4">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 4</div>
+        <h2>Osaka → Kyoto → Kifune → teamLab</h2>
+        <div class="date">Wednesday • 9 Dec 2026</div>
+        <div class="chips"><span class="chip">🚆 Move City</span><span class="chip">⛩️ Kifune</span><span class="chip">🎨 teamLab</span><span class="chip">🏨 Kyoto</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">08:00</div><h3>Check-out Umeda → Kyoto</h3><p>JR Osaka Station → <b>JR Kyoto Line Special Rapid</b> → Kyoto Station (~30 นาที)</p></div>
+        <div class="step"><div class="time">~09:00</div><h3>ฝากกระเป๋าที่ Kyoto Station Hotel</h3><p>แนะนำ Miyako City Kintetsu Kyoto Station เพื่อสะดวกตอนขึ้น AONIYOSHI วันที่ 12</p></div>
+        <div class="step"><div class="time">09:15–10:40</div><h3>Kyoto → Kifune</h3><p>JR Kyoto → <b>Tofukuji</b> → Keihan → <b>Demachiyanagi</b> → Eizan Kurama Line → <b>Kibuneguchi</b> → Kyoto Bus 33 → <b>Kibune</b></p></div>
+        <div class="step"><div class="time">10:40–14:00</div><h3>Kifune Shrine</h3><p>Main Shrine → Yui-no-Yashiro → Okumiya และ winter lunch</p></div>
+        <div class="step"><div class="time">~17:00</div><h3>teamLab Biovortex Kyoto</h3><p>กลับ Kyoto Station, check-in แล้วเดินประมาณ 10–15 นาทีไป teamLab</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Transit Chain</h4><div class="route">
+          <div class="station">Kyoto</div><div class="arrow">↓ JR Nara Line</div>
+          <div class="station">Tofukuji</div><div class="arrow">↓ Keihan</div>
+          <div class="station">Demachiyanagi</div><div class="arrow">↓ Eizan</div>
+          <div class="station">Kibuneguchi</div><div class="arrow">↓ Bus 33</div>
+          <div class="station">Kibune</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kifune+Shrine+Kyoto">เปิด Kifune</a></div>
+        <div class="note"><b>หมายเหตุสำคัญ:</b> วันที่ 9 Dec 2026 เป็นวันพุธ และ Hirobun มีข้อมูลปิดวันพุธในช่วง Dec–Mar ดังนั้นอย่าล็อก Hirobun จนกว่าจะยืนยันวันเปิดจริง ควรมีร้านสำรองใน Kifune</div>
+        <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Kyoto Station คืนที่ 1/3</b></p></div>
+      </aside>
+    </div>
+  
+    <div class="gallery">
+      <a class="photo" target="_blank" href="https://kifunejinja.jp/en/">
+        <img loading="lazy" src="https://image.ganref.jp/photos/members/rontimu29/96e3b66261b4a7ee4666f6847cb3a95c_4.jpg" alt="Kifune Shrine">
+        <span class="caption">Kifune Shrine • 貴船神社</span>
+      </a>
+      <a class="photo" target="_blank" href="https://www.teamlab.art/e/kyoto/">
+        <img loading="lazy" src="https://image-cdn.hypb.st/https%3A/hypebeast.com/image/2025/10/07/universe-of-existence-universe-of-perception-teamlab-biovortex-kyoto-opening-info-024.jpg?cbr=1&fit=max&q=90&w=800" alt="teamLab Biovortex Kyoto">
+        <span class="caption">teamLab Biovortex Kyoto</span>
+      </a>
+    </div>
+
+</section>
+
+  <!-- DAY 5 -->
+  <section class="day" id="d5">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 5</div>
+        <h2>Romantic Train → Hozugawa → Arashiyama</h2>
+        <div class="date">Thursday • 10 Dec 2026</div>
+        <div class="chips"><span class="chip">🚂 Sagano</span><span class="chip">🛶 Hozugawa</span><span class="chip">🎋 Arashiyama</span><span class="chip">🏨 Kyoto</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">~07:45</div><h3>Kyoto → Saga-Arashiyama</h3><p>JR Sagano Line จาก Kyoto ลง <b>Saga-Arashiyama</b></p></div>
+        <div class="step"><div class="time">~08:15</div><h3>Walk → Torokko Saga</h3><p>เดิน 2–5 นาทีไปสถานี Sagano Romantic Train</p></div>
+        <div class="step"><div class="time">~09:00</div><h3>Romantic Train</h3><p><b>Torokko Saga → Torokko Kameoka</b> ใช้เวลาประมาณ 25 นาที</p></div>
+        <div class="step"><div class="time">~10:30–12:30</div><h3>Hozugawa River Boat</h3><p>ต่อ shuttle/transport ไปท่าเรือ Kameoka แล้วล่องเรือกลับเข้า <b>Arashiyama</b></p></div>
+        <div class="step"><div class="time">Afternoon</div><h3>Arashiyama</h3><p>Lunch → Togetsukyo → Tenryu-ji → Bamboo Grove → Cafe → JR Saga-Arashiyama → Kyoto</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Route</h4><div class="route">
+          <div class="station">Kyoto</div><div class="arrow">↓ JR Sagano Line</div>
+          <div class="station">Saga-Arashiyama</div><div class="arrow">↓ Walk</div>
+          <div class="station">Torokko Saga</div><div class="arrow">↓ Romantic Train</div>
+          <div class="station">Torokko Kameoka</div><div class="arrow">↓ Shuttle</div>
+          <div class="station">Hozugawa Boat</div><div class="arrow">↓ River</div>
+          <div class="station">Arashiyama</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Torokko+Saga+Station">เปิด Torokko Saga</a></div>
+        <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Kyoto Station คืนที่ 2/3</b></p></div>
+      </aside>
+    </div>
+  
+    <div class="gallery">
+      <a class="photo" target="_blank" href="https://www.sagano-kanko.co.jp/en/">
+        <img loading="lazy" src="https://img.cooljapan-videos.com/r/1600x1000/files/articles/ybia1y4u/thumbnail/7d2fe5fd3a4f2b8ef97eef812ae4438a.jpg" alt="Sagano Romantic Train">
+        <span class="caption">Sagano Romantic Train</span>
+      </a>
+      <a class="photo" target="_blank" href="https://www.hozugawakudari.jp/">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?auto=format&fit=crop&w=1000&q=80" alt="Arashiyama">
+        <span class="caption">Hozugawa / Arashiyama</span>
+      </a>
+    </div>
+
+</section>
+
+  <!-- DAY 6 -->
+  <section class="day" id="d6">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 6</div>
+        <h2>Amanohashidate Day Trip</h2>
+        <div class="date">Friday • 11 Dec 2026</div>
+        <div class="chips"><span class="chip">🌊 Amanohashidate</span><span class="chip">🚠 View Land</span><span class="chip">🦀 Seafood</span><span class="chip">🏨 Kyoto</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">~07:00</div><h3>Kyoto → Amanohashidate</h3><p>เลือก Limited Express <b>HASHIDATE</b> ถ้ามี direct รอบเหมาะ; ถ้าไม่เหมาะใช้ขบวนที่เปลี่ยนที่ Fukuchiyama</p></div>
+        <div class="step"><div class="time">~09:15</div><h3>Amanohashidate Station</h3><p>เดินประมาณ 5 นาทีไป View Land</p></div>
+        <div class="step"><div class="time">09:30–11:15</div><h3>View Land</h3><p>ขึ้น Chairlift หรือ Monorail → Matanozoki → viewpoint</p></div>
+        <div class="step"><div class="time">11:15–14:30</div><h3>Chionji + Lunch + Sandbar</h3><p>Chionji → Seafood lunch → Kaisenkyo Bridge → เดินเข้า Amanohashidate Sandbar แล้วกลับ</p></div>
+        <div class="step"><div class="time">~16:00</div><h3>Return Kyoto</h3><p>ขึ้น Limited Express กลับ Kyoto Station และพักคืนสุดท้ายที่ Kyoto</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Route</h4><div class="route">
+          <div class="station">Kyoto Station</div><div class="arrow">↓ Limited Express</div>
+          <div class="station">Amanohashidate Station</div><div class="arrow">↓ Walk</div>
+          <div class="station">View Land</div><div class="arrow">↓ Walk</div>
+          <div class="station">Chionji → Sandbar</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Amanohashidate+View+Land">เปิด View Land</a></div>
+        <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Kyoto Station คืนที่ 3/3</b><br>คืนนี้จัดกระเป๋าเพื่อย้าย Namba วันรุ่งขึ้น</p></div>
+      </aside>
+    </div>
+  
+    <div class="gallery">
+      <a class="photo" target="_blank" href="https://www.viewland.jp/en/">
+        <img loading="lazy" src="https://my10.jp/images/kasamatsu-park-01.jpg" alt="Amanohashidate">
+        <span class="caption">Amanohashidate • 天橋立</span>
+      </a>
+      <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Amanohashidate+View+Land">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1000&q=80" alt="Amanohashidate winter trip">
+        <span class="caption">View Land / Winter Day Trip</span>
+      </a>
+    </div>
+
+</section>
+
+  <!-- DAY 7 -->
+  <section class="day" id="d7">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 7</div>
+        <h2>Uji → THISIS SHIZEN → AONIYOSHI → Namba</h2>
+        <div class="date">Saturday • 12 Dec 2026</div>
+        <div class="chips"><span class="chip">🍵 Uji</span><span class="chip">🌿 THISIS SHIZEN</span><span class="chip">💜 AONIYOSHI</span><span class="chip">🏨 Namba</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">08:00</div><h3>Check-out + ฝากกระเป๋า</h3><p>ฝากกระเป๋าใหญ่ไว้ที่โรงแรม Kyoto Station แล้วเอาแค่ day bag ไป Uji</p></div>
+        <div class="step"><div class="time">08:10–13:00</div><h3>Kyoto → Uji</h3><p>JR Nara Line → ลง <b>JR Uji</b> → Byodoin → Omotesando → Uji River → Ujigami Shrine → Lunch</p></div>
+        <div class="step"><div class="time">13:30–15:00</div><h3>THISIS SHIZEN</h3><p>กลับ Kyoto → Subway Karasuma Line → ลง <b>Karasuma Oike K08</b> → Shinpuhkan 1F</p></div>
+        <div class="step"><div class="time">15:20–16:20</div><h3>รับกระเป๋า + Kintetsu Kyoto</h3><p>กลับ Kyoto Station รับกระเป๋า แล้วไป <b>Kintetsu Kyoto Station</b></p></div>
+        <div class="step"><div class="time">16:55–18:12</div><h3>AONIYOSHI → Osaka-Namba</h3><p>นั่งรถไฟพิเศษผ่าน Nara แต่ <b>ไม่ลง Nara</b> แล้วลงสุดที่ Osaka-Namba</p></div>
+        <div class="step"><div class="time">~18:30</div><h3>Check-in Namba</h3><p>เดินไปโรงแรมโซน Nankai Namba แล้วออกกิน dinner / Dotonbori แบบเบาๆ</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Route</h4><div class="route">
+          <div class="station">Kyoto</div><div class="arrow">↓ JR Nara Line</div>
+          <div class="station">JR Uji</div><div class="arrow">↓ กลับ Kyoto</div>
+          <div class="station">Karasuma Oike</div><div class="arrow">↓ Subway กลับ</div>
+          <div class="station">Kintetsu Kyoto</div><div class="arrow">↓ AONIYOSHI</div>
+          <div class="station">Osaka-Namba</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Uji+Station+Kyoto">เปิด Uji</a></div>
+        <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Namba คืนที่ 1/2</b><br>แนะนำ Hiyori Hotel Osaka Namba Station</p></div>
+      </aside>
+    </div>
+  
+    <div class="gallery">
+      <a class="photo" target="_blank" href="https://www.byodoin.or.jp/en/">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80" alt="Uji Kyoto">
+        <span class="caption">Uji • Byodoin Area</span>
+      </a>
+      <a class="photo" target="_blank" href="https://www.kintetsu.co.jp/foreign/thai/aoniyoshi/">
+        <img loading="lazy" src="https://stat.ameba.jp/user_images/20221106/15/izumimi0217/7b/0f/j/o0620046515199017273.jpg" alt="AONIYOSHI train">
+        <span class="caption">AONIYOSHI • Sightseeing Limited Express</span>
+      </a>
+    </div>
+
+</section>
+
+  <!-- DAY 8 -->
+  <section class="day" id="d8">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 8</div>
+        <h2>Namba → Shinsaibashi → Dotonbori → Christmas Market</h2>
+        <div class="date">Sunday • 13 Dec 2026</div>
+        <div class="chips"><span class="chip">🦁 Namba Yasaka</span><span class="chip">🛍️ Shopping</span><span class="chip">🌃 Dotonbori</span><span class="chip">🎄 Tenshiba</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">09:15</div><h3>Walk → Namba Yasaka Jinja</h3><p>จากโรงแรมโซน Nankai Namba เดินประมาณ 8–10 นาที ไม่ต้องขึ้นรถ</p></div>
+        <div class="step"><div class="time">10:30–14:30</div><h3>Namba → Orange Street</h3><p>Namba Parks / Takashimaya → Lunch → เดินไป Orange Street → Amerikamura</p></div>
+        <div class="step"><div class="time">15:00–18:30</div><h3>Shinsaibashi → Dotonbori</h3><p>Shopping ที่ Shinsaibashi-suji แล้วเดินลง Dotonbori / Glico / Hozenji</p></div>
+        <div class="step"><div class="time">~18:30</div><h3>Namba → Tennoji</h3><p>Osaka Metro Midosuji Line จาก <b>Namba M20</b> → <b>Tennoji M23</b></p></div>
+        <div class="step"><div class="time">19:00–20:30</div><h3>Christmas Market • Tenshiba</h3><p>ถ้างานปี 2026 จัดตามช่วงปีก่อน เดินจาก Tennoji Station ไป Tenshiba ประมาณ 5 นาที</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Walking Flow</h4><div class="route">
+          <div class="station">Namba Hotel</div><div class="arrow">↓ Walk</div>
+          <div class="station">Namba Yasaka</div><div class="arrow">↓ Walk</div>
+          <div class="station">Orange Street</div><div class="arrow">↓ Walk</div>
+          <div class="station">Amerikamura</div><div class="arrow">↓ Walk</div>
+          <div class="station">Shinsaibashi</div><div class="arrow">↓ Walk</div>
+          <div class="station">Dotonbori</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Namba+Yasaka+Jinja">เปิด Namba Yasaka</a></div>
+        <div class="note"><b>Christmas Market:</b> รอประกาศตาราง Osaka Christmas Market 2026 อีกครั้งก่อนล็อก</div>
+        <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Namba คืนที่ 2/2</b><br>คืนนี้จัดกระเป๋ากลับไทย</p></div>
+      </aside>
+    </div>
+  
+    <div class="gallery">
+      <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Namba+Yasaka+Jinja">
+        <img loading="lazy" src="https://ppap.kinto-jp.com/spots_images/1193-images/855.jpg" alt="Namba Yasaka Shrine">
+        <span class="caption">Namba Yasaka Jinja • Lion Head</span>
+      </a>
+      <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dotonbori+Osaka">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?auto=format&fit=crop&w=1000&q=80" alt="Dotonbori Osaka">
+        <span class="caption">Dotonbori • Osaka Night</span>
+      </a>
+      <a class="photo" target="_blank" href="https://osaka-christmasmarket.com/">
+        <img loading="lazy" src="https://www.lmaga.jp/wp-content/uploads/2025/11/tenshibaxmas20251128_11.jpg" alt="Osaka Christmas Market">
+        <span class="caption">Osaka Christmas Market • Tenshiba</span>
+      </a>
+    </div>
+
+</section>
+
+  <!-- DAY 9 -->
+  <section class="day" id="d9">
+    <div class="dayhead">
+      <div class="daytitle">
+        <div class="daynum">Day 9</div>
+        <h2>Namba → KIX → Bangkok</h2>
+        <div class="date">Monday • 14 Dec 2026</div>
+        <div class="chips"><span class="chip">🐟 Kuromon</span><span class="chip">🛍️ Last Shopping</span><span class="chip">🚆 Rapi:t</span><span class="chip">✈️ TG673</span></div>
+      </div>
+      <div class="dayimg" style="background-image:url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+    <div class="content">
+      <div class="timeline">
+        <div class="step"><div class="time">09:30</div><h3>Check-out + ฝากกระเป๋า</h3><p>ฝากกระเป๋าที่โรงแรมแล้วเดินไป Kuromon Market</p></div>
+        <div class="step"><div class="time">10:00–11:30</div><h3>Kuromon Brunch</h3><p>Seafood / sushi / snacks แล้วเดินกลับ Namba</p></div>
+        <div class="step"><div class="time">11:45–13:00</div><h3>Last-minute Shopping</h3><p>Takashimaya / Namba CITY / Namba Parks / drugstore</p></div>
+        <div class="step"><div class="time">~13:30</div><h3>Nankai Namba → KIX</h3><p>ขึ้น <b>Nankai Limited Express Rapi:t</b> จาก <b>Nankai Namba Station</b> ไป <b>Kansai-Airport Station</b></p></div>
+        <div class="step"><div class="time">~14:10</div><h3>KIX Terminal 1</h3><p>Check-in TG673 → Security → Immigration → Lounge / Duty Free</p></div>
+        <div class="step"><div class="time">17:25–22:00</div><h3>TG673 • KIX → BKK</h3><p>กลับ Bangkok</p></div>
+      </div>
+      <aside>
+        <div class="routebox"><h4>Route</h4><div class="route">
+          <div class="station">Namba Hotel</div><div class="arrow">↓ Walk</div>
+          <div class="station">Kuromon Market</div><div class="arrow">↓ Walk back</div>
+          <div class="station">Nankai Namba</div><div class="arrow">↓ Rapi:t</div>
+          <div class="station">Kansai-Airport Station</div><div class="arrow">↓ Walk</div>
+          <div class="station">KIX Terminal 1</div>
+        </div>
+        <a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Nankai+Namba+Station">เปิด Nankai Namba</a></div>
+        <div class="infobox"><h4>Flight</h4><p><b>TG673</b><br>KIX 17:25 → BKK 22:00</p></div>
+      </aside>
+    </div>
+  
+    <div class="gallery">
+      <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1554797589-7241bb691973?auto=format&fit=crop&w=1000&q=80" alt="Osaka market">
+        <span class="caption">Kuromon Ichiba Market</span>
+      </a>
+      <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80" alt="Kansai Airport flight">
+        <span class="caption">KIX → Bangkok • TG673</span>
+      </a>
+    </div>
+
+</section>
+
+  <section class="day">
+    <div class="content" style="grid-template-columns:1fr">
+      <div>
+        <h2 style="margin-top:0">Booking Checklist</h2>
+        <div class="checklist">
+          <div class="check"><span class="dot"></span><div>โรงแรม Umeda 6–9 Dec</div></div>
+          <div class="check"><span class="dot"></span><div>USJ Studio Pass + Express Pass • 8 Dec</div></div>
+          <div class="check"><span class="dot"></span><div>โรงแรม Kyoto Station 9–12 Dec</div></div>
+          <div class="check"><span class="dot"></span><div>teamLab Biovortex Kyoto • 9 Dec</div></div>
+          <div class="check"><span class="dot"></span><div>Sagano Romantic Train + Hozugawa Boat • 10 Dec</div></div>
+          <div class="check"><span class="dot"></span><div>Limited Express Kyoto ↔ Amanohashidate • 11 Dec</div></div>
+          <div class="check"><span class="dot"></span><div>AONIYOSHI Kyoto → Osaka-Namba • 12 Dec</div></div>
+          <div class="check"><span class="dot"></span><div>โรงแรม Namba 12–14 Dec</div></div>
+          <div class="check"><span class="dot"></span><div>ตรวจ Osaka Christmas Market 2026 เมื่อประกาศ</div></div>
+          <div class="check"><span class="dot"></span><div>ตรวจ timetable จริงของรถไฟ/รถบัสใกล้วันเดินทาง</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Osaka & Kyoto Trip Planner • 6–14 December 2026 • ตารางรถไฟและเวลาเปิดจริงควรตรวจซ้ำก่อนเดินทาง • รูปประกอบเชื่อมจากแหล่งท่องเที่ยว/เว็บไซต์ภายนอก
+  </footer>
+</main>
+</body>
+</html>
