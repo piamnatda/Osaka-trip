@@ -136,14 +136,45 @@
       .day{break-inside:avoid;box-shadow:none}
       body{background:white}
     }
-  </style>
+  
+    .deepdetail{margin:0 24px 26px;padding:22px;border:1px solid var(--line);border-radius:22px;background:#fff}
+    .deepdetail h3{font-size:24px;margin:0 0 8px}
+    .deepdetail h4{font-size:17px;margin:22px 0 8px}
+    .deepdetail p{margin:7px 0;color:#383838}
+    .journey{margin:14px 0;padding:16px 18px;background:#f6f8f7;border-radius:16px;border-left:4px solid var(--accent)}
+    .journey .stop{padding:5px 0;font-weight:700}
+    .journey .down{color:#888;padding-left:7px}
+    .photo3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px 0}
+    .photo3 img{width:100%;height:210px;object-fit:cover;border-radius:15px;border:1px solid var(--line)}
+    .highlight{font-weight:800;color:var(--accent)}
+    .official{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:12px;background:#171717;color:#fff;text-decoration:none;font-weight:700;font-size:13px}
+    @media(max-width:850px){.photo3{grid-template-columns:1fr 1fr}.deepdetail{margin:0 18px 20px}}
+    @media(max-width:520px){.photo3{grid-template-columns:1fr}.photo3 img{height:220px}}
+
+
+    .fullguide{margin:0 24px 26px;padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff}
+    .fullguide h3{font-size:25px;margin:0 0 8px}
+    .fullguide h4{font-size:18px;margin:24px 0 8px}
+    .fullguide p{margin:7px 0;color:#383838}
+    .fullguide .segment{padding:18px 0;border-bottom:1px solid var(--line)}
+    .fullguide .segment:last-child{border-bottom:0}
+    .fullguide .segtime{font-size:13px;font-weight:850;color:var(--accent);letter-spacing:.04em}
+    .fullguide .transport{background:#f5f8f7;border-radius:16px;padding:14px 16px;margin:10px 0}
+    .fullguide .transport b{color:#202020}
+    .fullguide .sleep{background:#eef7f3;border-radius:16px;padding:14px 16px;margin-top:12px}
+    .fullguide .warning{background:#fff6df;border:1px solid #f2dfaa;border-radius:16px;padding:13px 15px;margin-top:12px}
+    .fullguide .reserve{background:#f7f4ff;border:1px solid #e5ddfa;border-radius:16px;padding:13px 15px;margin-top:12px}
+    .fullguide .micro{color:var(--muted);font-size:13px}
+    @media(max-width:520px){.fullguide{margin:0 18px 20px;padding:18px}}
+
+</style>
 </head>
 <body>
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Japan Winter Trip • 9 Days / 8 Nights</div>
     <h1>Osaka & Kyoto<br>6–14 Dec 2026</h1>
-    <p>แผนเที่ยวแบบเปิดดูง่ายบนมือถือ เน้นสถานีที่ต้องลง วิธีต่อรถ จุดเที่ยว โรงแรม และช่วงเวลาของแต่ละวัน</p>
+    <p>แผนเที่ยวฉบับละเอียด: เวลาออกเดินทาง สถานีที่ขึ้น–ลง จุดเปลี่ยนรถ วิธีเดินต่อ จุดเที่ยว รูปสถานที่ โรงแรม และข้อควรระวังของแต่ละวัน</p>
   </div>
 </header>
 
@@ -199,7 +230,34 @@
         <div class="infobox"><h4>นอนที่ไหน</h4><p><b>Umeda คืนที่ 1/3</b><br>Hotel Hankyu RESPIRE Osaka หรือโรงแรมใกล้ JR Osaka Station</p></div>
       </aside>
     </div>
-  </section>
+  
+<div class="fullguide">
+  <h3>Day 1 ฉบับละเอียด • ถึงญี่ปุ่นและเข้า Umeda</h3>
+  <div class="segment"><div class="segtime">08:15–15:45 • BANGKOK → OSAKA</div>
+    <h4>✈️ TG672 • BKK → KIX</h4>
+    <p>ออกจาก Bangkok Suvarnabhumi 08:15 และถึง Kansai International Airport (KIX) 15:45 ตามแผนเที่ยวบินของทริปนี้</p>
+    <p>หลังเครื่องลง เผื่อเวลา Immigration → รับกระเป๋า → Customs ประมาณ 1–1.5 ชั่วโมง จึงคาดว่าจะออก Arrival Hall ได้ราว 16:45–17:15</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 17:00 • KIX TERMINAL 1 → RAILWAY</div>
+    <h4>🚶 ไป Kansai-airport Station</h4>
+    <p>จาก Terminal 1 ขึ้นไปชั้น 2 แล้วตามป้าย <b>Railways / JR / Nankai</b> ข้ามทางเชื่อมไป Kansai-airport Station</p>
+    <div class="transport"><b>วันนี้เลือก JR เพราะเรานอน Umeda</b><br>Kansai-airport Station → JR → Osaka Station<br>ถ้า HARUKA รอบเหมาะ ใช้ HARUKA เพื่อความสบายกับกระเป๋า; ถ้าเวลาไม่พอดีใช้ Kansai Airport Rapid ได้ ไม่จำเป็นต้องใช้ Nankai เพราะ Nankai เหมาะกับ Namba มากกว่า</div>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 18:30–19:00 • OSAKA STATION</div>
+    <h4>🏨 Osaka Station → Umeda Hotel</h4>
+    <p>ลง <b>JR Osaka Station</b> แล้วเดินออกฝั่ง North / Central North ไปทาง Yodobashi Camera, LINKS UMEDA และโรงแรม</p>
+    <p>ตัวเลือกหลักของแผนคือ <b>Hotel Hankyu RESPIRE Osaka</b> เพราะเดินทางสะดวกมากสำหรับ Day 2 และ Day 3</p>
+  </div>
+  <div class="segment"><div class="segtime">19:15–21:30 • UMEDA</div>
+    <h4>🍜 Dinner + เดินเบา ๆ</h4>
+    <p>กินข้าวที่ LINKS UMEDA / LUCUA แล้วถ้ายังมีแรงเดิน Grand Front Osaka, Grand Green Osaka หรือ illumination รอบ Osaka Station ก่อนกลับโรงแรม</p>
+    <p>วันนี้ไม่ใส่ attraction เพิ่ม เพราะวันรุ่งขึ้นต้องออกเช้าไป Katsuoji</p>
+  </div>
+  <div class="sleep"><b>🏨 นอน: Osaka – Umeda คืนที่ 1/3</b><br>Hotel Hankyu RESPIRE Osaka เป็นตัวเลือกหลัก; Hotel Vischio Osaka / Hotel Granvia Osaka เป็นตัวเลือกสำรอง</div>
+  <div class="reserve"><b>สิ่งที่ต้องเตรียม:</b> โรงแรม Umeda 6–9 Dec • ICOCA สำหรับรถไฟ/Metro • ตั๋วเข้าเมืองซื้อใกล้วันเดินทางได้</div>
+</div>
+
+</section>
 
   <!-- DAY 2 -->
   <section class="day" id="d2">
@@ -233,9 +291,49 @@
       </aside>
     </div>
   
+
+<div class="fullguide">
+  <h3>Day 2 ฉบับละเอียด • Katsuoji → Hakugintei → Fruit Cafe Hikari</h3>
+  <div class="segment"><div class="segtime">07:50 • HOTEL → UMEDA M16</div>
+    <h4>🚇 Umeda → Minoh-kayano</h4>
+    <p>ออกจากโรงแรมประมาณ 07:50 แล้วเดินไป <b>Osaka Metro Umeda Station</b> — วันนี้ใช้ Metro ไม่ใช่ JR Osaka Station</p>
+    <div class="transport"><b>Midosuji Line</b><br>Umeda M16 → นั่งตรงไปทาง Minoh-kayano → <b>Minoh-kayano M06</b><br>ใช้เวลาประมาณ 30 นาทีและไม่ต้องเปลี่ยนสาย</div>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 08:40–09:30 • MINOH-KAYANO → KATSUOJI</div>
+    <h4>🚌 ต่อ Bus ไป Katsuoji</h4>
+    <p>ออกจาก Metro แล้วตามป้าย Bus terminal ต่อรถบัสตรงไป Katsuoji โดยตั้งเป้ารอบประมาณ 09:00 เวลารถจริงเดือน Dec 2026 ต้องตรวจอีกครั้ง</p>
+    <p>ลงป้าย <b>Katsuoji</b> แล้วเดินเข้าสู่วัดได้เลย</p>
+  </div>
+  <div class="segment"><div class="segtime">09:30–11:45 • KATSUOJI</div>
+    <h4>🍁 Katsuoji Temple • 勝尾寺</h4>
+    <p>เที่ยวบริเวณประตูวัด บ่อน้ำ ทางขึ้น เจดีย์ และจุด Daruma ต่าง ๆ โดยเผื่อประมาณ 2 ชั่วโมง เหมาะกับการถ่ายรูปและดูใบไม้ปลายฤดู</p>
+    <p>ตั้งเป้ารถกลับประมาณ 11:50 เพื่อไม่ให้ lunch ช้าเกินไป</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 12:15–13:30 • KATSUOJI → HOMMACHI</div>
+    <h4>🚌 + 🚇 กลับเข้า Osaka</h4>
+    <div class="transport">Katsuoji → Bus → <b>Minoh-kayano</b> → Midosuji Line → <b>Hommachi M18</b></div>
+    <p>ใช้เวลาจาก Minoh-kayano ถึง Hommachi ประมาณ 30–35 นาที</p>
+  </div>
+  <div class="segment"><div class="segtime">13:30–14:15 • HOMMACHI</div>
+    <h4>🍛 Hakugintei • Itoh Building branch</h4>
+    <p>ใช้สาขา Itoh Building, Minamihonmachi 3-6-14 B2F เพราะแผนนี้ตรงกับวันจันทร์และข้อมูลปัจจุบันของสาขานี้เหมาะกับช่วง lunch มากกว่า main shop</p>
+  </div>
+  <div class="segment"><div class="segtime">14:30–16:00 • WALK 5–10 MIN</div>
+    <h4>🍓 Fruit Cafe Hikari</h4>
+    <p>จาก Hakugintei เดินประมาณ 5–10 นาทีไป <b>Fruit Cafe Hikari</b> ที่ Urban Net Midosuji Building 1F, Awajimachi 4-2-13</p>
+    <p>พักกินผลไม้/พาร์เฟต์ แล้วเดินกลับ Hommachi Station</p>
+  </div>
+  <div class="segment"><div class="segtime">หลัง 16:00 • HOMMACHI → UMEDA</div>
+    <div class="transport">Hommachi M18 → Midosuji Line → <b>Umeda M16</b> (~5 นาที)</div>
+    <p>เย็น shopping / dinner รอบ Umeda ได้ตามแรง</p>
+  </div>
+  <div class="sleep"><b>🏨 นอน: Osaka – Umeda คืนที่ 2/3</b></div>
+  <div class="warning"><b>ตรวจใกล้วันเดินทาง:</b> timetable รถบัส Minoh-kayano ↔ Katsuoji และเวลาร้านอาหาร Dec 2026</div>
+</div>
+
     <div class="gallery">
       <a class="photo" target="_blank" href="https://maido-bob.osaka/en/spot/katsuoji-temple/">
-        <img loading="lazy" src="https://maido-bob.osaka/wp-content/uploads/2020/06/Katsuoji-temple_01.jpg" onerror="this.src='https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1000&q=80'" alt="Katsuoji Temple">
+        <img loading="lazy" src="https://images.openai.com/static-rsc-4/5seLrj5IE4PmwqLDyoDDsBzggrY70zfenxjVNISfK4SA3P0TaqVyOjYlRMGsOyPJdeq38-eKEohYVe_mQGYl-PopRpvQytjU8tTBOz2HpcOU9pJiIgBwbY_IRRuf29zIKky4ohrwWk_RrCiIWRNtFX2WjQK5V3RTr9S4PIrm35U68weZ-lQjoPqBu8RTCrS6?purpose=fullsize" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='700'%3E%3Crect width='100%25' height='100%25' fill='%23eef3f1'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-size='42' fill='%23566'%3EKatsuoji Temple%3C/text%3E%3C/svg%3E'" alt="Katsuoji Temple">
         <span class="caption">Katsuoji Temple • 勝尾寺</span>
       </a>
       <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Katsuoji+Temple">
@@ -276,6 +374,36 @@
       </aside>
     </div>
   
+
+<div class="fullguide">
+  <h3>Day 3 ฉบับละเอียด • Universal Studios Japan เต็มวัน</h3>
+  <div class="segment"><div class="segtime">06:40–07:20 • UMEDA → UNIVERSAL CITY</div>
+    <h4>🚆 ไป USJ ให้ถึงก่อนเปิด</h4>
+    <p>ออกโรงแรมประมาณ 06:40–06:50 เดินไป <b>JR Osaka Station</b></p>
+    <div class="transport"><b>Route ปกติ:</b> Osaka Station → JR Osaka Loop Line ทาง Nishikujo/Bentencho → <b>Nishikujo</b> → เปลี่ยน JR Yumesaki Line → <b>Universal City</b><br>ถ้าเช้าวันนั้นมีขบวน direct Osaka → Universal City ให้นั่งตรงได้เลย</div>
+    <p>จาก Universal City Station เดินผ่าน Universal CityWalk ประมาณ 5 นาทีถึงทางเข้า USJ ตั้งเป้าถึงประมาณ 07:15–07:30</p>
+  </div>
+  <div class="segment"><div class="segtime">MORNING • SUPER NINTENDO WORLD</div>
+    <h4>🍄 Priority สูงสุด</h4>
+    <p>ลำดับจริงต้องยึด <b>Express Pass timed entry</b> ที่ซื้อได้ เพราะเวลาเข้าแต่ละโซนเป็นตัวกำหนด route ในสวน</p>
+    <p>เป้าหมายหลัก: Mario Kart → Yoshi's Adventure → Donkey Kong / Mine-Cart Madness ตามสิทธิ์และเวลาที่ได้</p>
+  </div>
+  <div class="segment"><div class="segtime">AFTERNOON</div>
+    <h4>🪄 Wizarding World of Harry Potter + Attractions</h4>
+    <p>ไป Harry Potter ตาม timed entry/คิว แล้วกระจาย attraction อื่นตาม Express Pass ไม่ควรล็อกตารางนาทีต่อนาทีจนกว่าจะรู้เวลาบน Express Pass</p>
+  </div>
+  <div class="segment"><div class="segtime">EVENING–NIGHT</div>
+    <h4>🎄 Seasonal / Christmas atmosphere</h4>
+    <p>เดือนธันวาคมมีโอกาสมี seasonal program แต่ต้องรอ USJ ประกาศ calendar ปี 2026 ก่อน จากนั้นอยู่ดูไฟ/บรรยากาศกลางคืนแล้วค่อยกลับ</p>
+  </div>
+  <div class="segment"><div class="segtime">RETURN • UNIVERSAL CITY → OSAKA</div>
+    <div class="transport">Universal City → JR Yumesaki Line → Nishikujo → Osaka Loop Line → <b>Osaka Station</b><br>หรือใช้ direct train ถ้ามีในเวลานั้น</div>
+    <p>กลับโรงแรม กิน dinner แถว Umeda และจัดกระเป๋า เพราะพรุ่งนี้ check-out ไป Kyoto</p>
+  </div>
+  <div class="sleep"><b>🏨 นอน: Osaka – Umeda คืนที่ 3/3</b></div>
+  <div class="reserve"><b>ต้องจอง:</b> USJ Studio Pass + แนะนำ Express Pass อย่างมาก • ตรวจ official opening hours ของ 8 Dec 2026 ก่อนเดินทาง</div>
+</div>
+
     <div class="gallery">
       <a class="photo" target="_blank" href="https://www.usj.co.jp/">
         <img loading="lazy" src="https://preparetravelplans.com/wp-content/uploads/2024/05/2a-Major-Attractions-UVT.jpg" alt="Super Nintendo World USJ">
@@ -322,6 +450,47 @@
       </aside>
     </div>
   
+
+<div class="fullguide">
+  <h3>Day 4 ฉบับละเอียด • ย้าย Kyoto → Kifune → Winter Lunch → teamLab</h3>
+  <div class="segment"><div class="segtime">08:00 • CHECK-OUT UMEDA</div>
+    <h4>🚆 Osaka → Kyoto</h4>
+    <p>Check-out แล้วเดินไป JR Osaka Station พร้อมกระเป๋า</p>
+    <div class="transport"><b>JR Kyoto Line Special Rapid</b><br>Osaka Station → <b>Kyoto Station</b> ประมาณ 30 นาที<br>ไม่ต้องใช้ Shinkansen</div>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 09:00 • KYOTO STATION</div>
+    <h4>🧳 ฝากกระเป๋าที่โรงแรม</h4>
+    <p>ตัวเลือกหลัก <b>Miyako City Kintetsu Kyoto Station</b> เพราะอยู่กับ Kyoto Station และสะดวกมากในวันที่ 12 ที่ต้องขึ้น AONIYOSHI</p>
+  </div>
+  <div class="segment"><div class="segtime">09:15–10:40 • KYOTO → KIFUNE</div>
+    <h4>🚆 Route หลายต่อ แต่เป็นเส้นตรงที่สุด</h4>
+    <div class="transport">
+      Kyoto Station → <b>JR Nara Line</b> → Tofukuji<br>
+      Tofukuji → <b>Keihan Main Line</b> → Demachiyanagi<br>
+      Demachiyanagi → <b>Eizan Kurama Line</b> → Kibuneguchi<br>
+      Kibuneguchi-mae → <b>Kyoto Bus 33</b> → Kibune<br>
+      Kibune bus stop → เดินประมาณ 5 นาที → Kifune Shrine
+    </div>
+  </div>
+  <div class="segment"><div class="segtime">10:40–14:00 • KIFUNE</div>
+    <h4>⛩️ Kifune Shrine</h4>
+    <p>เที่ยวตามลำดับ <b>Main Shrine → lunch → Yui-no-Yashiro → Okumiya</b> จะเดินง่ายและไม่ย้อนมาก</p>
+    <p>เดือนธันวาคมไม่ใช่ฤดู nagashi somen ซึ่งเป็นเมนูฤดูร้อน ดังนั้นแผนอาหารเปลี่ยนเป็น winter seasonal meal เช่น Botan Gozen / Botan Nabe หรือ yudofu</p>
+    <div class="warning"><b>สำคัญ:</b> วันที่ 9 Dec 2026 เป็นวันพุธ ข้อมูล seasonal operation ของ Hirobun ต้องตรวจอีกครั้งก่อนจอง เพราะมีช่วงที่ร้านปิดวันพุธในฤดูหนาว จึงควรมีร้านสำรองใน Kifune และไม่ควรถือว่า Hirobun confirmed</div>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 14:00–15:30 • KIFUNE → KYOTO</div>
+    <div class="transport">Kibune → Bus 33 → Kibuneguchi → Eizan → Demachiyanagi → Keihan → Tofukuji → JR Nara Line → <b>Kyoto Station</b></div>
+    <p>ถึง Kyoto Station แล้ว check-in / พักสั้น ๆ</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 16:40–20:00 • TEAMLAB</div>
+    <h4>🎨 teamLab Biovortex Kyoto</h4>
+    <p>จาก Kyoto Station ฝั่ง Hachijo เดินประมาณ 10–15 นาทีไป teamLab ตั้งเป้าจอง timed entry ราว <b>17:00</b> และเผื่อเที่ยว 2.5–3 ชั่วโมง</p>
+    <p>หลังจบเดินกลับ Kyoto Station แล้วกิน dinner รอบสถานี</p>
+  </div>
+  <div class="sleep"><b>🏨 นอน: Kyoto Station คืนที่ 1/3</b></div>
+  <div class="reserve"><b>ต้องจอง/ตรวจ:</b> Kyoto hotel • teamLab ~17:00 • ร้าน winter lunch ที่ Kifune • Bus/Eizan timetable ใกล้วันเดินทาง</div>
+</div>
+
     <div class="gallery">
       <a class="photo" target="_blank" href="https://kifunejinja.jp/en/">
         <img loading="lazy" src="https://image.ganref.jp/photos/members/rontimu29/96e3b66261b4a7ee4666f6847cb3a95c_4.jpg" alt="Kifune Shrine">
@@ -368,6 +537,43 @@
       </aside>
     </div>
   
+
+<div class="fullguide">
+  <h3>Day 5 ฉบับละเอียด • Sagano Romantic Train → Hozugawa Boat → Arashiyama</h3>
+  <div class="segment"><div class="segtime">07:40 • KYOTO HOTEL → JR KYOTO</div>
+    <p>ออกโรงแรมแล้วเดินเข้า JR Kyoto Station</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 07:50–08:20 • KYOTO → SAGA-ARASHIYAMA</div>
+    <div class="transport"><b>JR Sagano / San-in Line</b><br>Kyoto → <b>Saga-Arashiyama</b> ประมาณ 15–20 นาที</div>
+    <p>ลง Saga-Arashiyama แล้วเดิน 2–5 นาทีไป <b>Torokko Saga Station</b></p>
+  </div>
+  <div class="segment"><div class="segtime">เป้าหมายประมาณ 09:00 • ROMANTIC TRAIN</div>
+    <h4>🚂 Torokko Saga → Torokko Kameoka</h4>
+    <p>ขึ้น Sagano Romantic Train ฝั่ง Saga แล้วนั่งเลียบหุบเขา Hozugawa ไปลง <b>Torokko Kameoka</b> ใช้เวลาประมาณ 25 นาที</p>
+    <p>ควรเลือกรอบเช้าเพื่อให้ต่อเรือ Hozugawa ได้โดยไม่ต้องเร่งช่วงบ่าย</p>
+  </div>
+  <div class="segment"><div class="segtime">หลังลงรถไฟ • TOROKKO KAMEOKA → BOAT DOCK</div>
+    <h4>🚌 จุดนี้ห้ามเข้าใจว่าเป็นท่าเรือ</h4>
+    <p><b>Torokko Kameoka ไม่ใช่จุดขึ้นเรือ</b> ต้องต่อ shuttle / transport จากสถานีไปท่า Hozugawa River Boat ที่ Kameoka</p>
+  </div>
+  <div class="segment"><div class="segtime">เป้าหมายประมาณ 10:30–12:30 • HOZUGAWA</div>
+    <h4>🛶 Hozugawa River Boat Ride</h4>
+    <p>ล่องจาก Kameoka ไป Arashiyama ประมาณ 2 ชั่วโมง เวลาจริงขึ้นกับสภาพน้ำและการเดินเรือ</p>
+    <p>เดือนธันวาคมอากาศบนแม่น้ำหนาวกว่าบนบก ควรเตรียมเสื้อกันลม/ถุงมือ</p>
+  </div>
+  <div class="segment"><div class="segtime">12:30–17:00 • ARASHIYAMA</div>
+    <h4>🎋 เที่ยว Arashiyama ต่อโดยไม่ต้องย้อนกลับ Kameoka</h4>
+    <p>ขึ้นฝั่ง → Lunch → Togetsukyo Bridge → Tenryu-ji Garden → Bamboo Grove → Cafe</p>
+    <p>จาก Bamboo Grove / central Arashiyama เดินกลับ <b>JR Saga-Arashiyama Station</b></p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 17:00–17:30 • RETURN KYOTO</div>
+    <div class="transport">Saga-Arashiyama → JR Sagano Line → <b>Kyoto Station</b></div>
+    <p>Dinner รอบ Kyoto Station</p>
+  </div>
+  <div class="sleep"><b>🏨 นอน: Kyoto Station คืนที่ 2/3</b></div>
+  <div class="reserve"><b>ต้องจองเป็นคู่:</b> Sagano Romantic Train + Hozugawa Boat ต้องเลือกเวลาให้ต่อกันได้ • ตาราง Dec 10 2026 ต้องตรวจเมื่อ schedule เปิด • Romantic Train โดยทั่วไปเปิดขายใกล้หนึ่งเดือนก่อน แต่ต้องยืนยันกติกาปี 2026</div>
+</div>
+
     <div class="gallery">
       <a class="photo" target="_blank" href="https://www.sagano-kanko.co.jp/en/">
         <img loading="lazy" src="https://img.cooljapan-videos.com/r/1600x1000/files/articles/ybia1y4u/thumbnail/7d2fe5fd3a4f2b8ef97eef812ae4438a.jpg" alt="Sagano Romantic Train">
@@ -412,6 +618,44 @@
       </aside>
     </div>
   
+
+<div class="fullguide">
+  <h3>Day 6 ฉบับละเอียด • Amanohashidate เต็มวันจาก Kyoto</h3>
+  <div class="segment"><div class="segtime">06:45 • HOTEL → KYOTO STATION</div>
+    <p>ออกเช้าเพื่อขึ้น Limited Express รอบเช้า ไม่ย้ายโรงแรมและไม่เอากระเป๋าใหญ่ไป</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 07:00 • KYOTO → AMANOHASHIDATE</div>
+    <h4>🚆 Limited Express HASHIDATE</h4>
+    <p>ให้ priority ขบวน direct จาก <b>Kyoto Station → Amanohashidate Station</b> ใช้เวลาราว 2 ชั่วโมงกว่า เส้นทางผ่าน Kameoka / Ayabe / Fukuchiyama / Miyazu</p>
+    <p>ถ้าตารางจริงไม่มี direct รอบที่เหมาะ ให้เลือก connection ที่ Fukuchiyama แต่ควรจอง reserved seat ทั้งขาไปและกลับ</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 09:15–11:15 • VIEW LAND</div>
+    <p>ลง <b>Amanohashidate Station</b> แล้วเดินประมาณ 5 นาทีไปทางขึ้น Amanohashidate View Land</p>
+    <p>ขึ้น Chairlift ถ้าอากาศดี หรือ Monorail ถ้าหนาว/ลมแรง จากด้านบนดู Matanozoki และ panorama ของสันทราย</p>
+  </div>
+  <div class="segment"><div class="segtime">11:15–12:00 • CHIONJI</div>
+    <p>ลงจาก View Land แล้วเดินไป <b>Chionji Temple</b> บริเวณ Monju</p>
+  </div>
+  <div class="segment"><div class="segtime">12:00–13:00 • WINTER LUNCH</div>
+    <h4>🦀 Seafood / Crab / Kaisendon</h4>
+    <p>กินร้านแถว Monju / Chionji / Amanohashidate Station เพื่อไม่เสียเวลาเดินทางไกล</p>
+  </div>
+  <div class="segment"><div class="segtime">13:00–14:30 • KAISENKYO + SANDBAR</div>
+    <p>เดินผ่าน <b>Kaisenkyo rotating bridge</b> เข้า Amanohashidate Sandbar แล้วเดินเล่นบางช่วง</p>
+    <p>ไม่จำเป็นต้องเดินเต็มสันทรายประมาณ 3.6 กม. เพราะเราต้องกลับมาขึ้นรถไฟที่ Amanohashidate Station ฝั่งเดิม</p>
+  </div>
+  <div class="segment"><div class="segtime">14:30–15:30 • BUFFER</div>
+    <p>Cafe / souvenir / เดินกลับสถานี โดยเหลือ buffer ก่อนรถไฟกลับ</p>
+  </div>
+  <div class="segment"><div class="segtime">เป้าหมายประมาณ 16:00–18:15 • RETURN KYOTO</div>
+    <div class="transport">Amanohashidate Station → Reserved Limited Express → <b>Kyoto Station</b></div>
+    <p>Dinner ที่ Kyoto Station และกลับโรงแรมจัดกระเป๋า เพราะวันรุ่งขึ้นย้าย Namba</p>
+  </div>
+  <div class="sleep"><b>🏨 นอน: Kyoto Station คืนที่ 3/3</b></div>
+  <div class="warning"><b>ไม่ใส่ Ine ในวันนี้</b> เพราะแผนปัจจุบันไม่เช่ารถ และการต่อ bus ไป Ine ในเดือนธันวาคมจะทำให้วันแน่นและพึ่ง timetable มากเกินไป</div>
+  <div class="reserve"><b>ต้องจอง:</b> Reserved Limited Express Kyoto ↔ Amanohashidate ทั้งสองขา • ตรวจ View Land / chairlift operation และ timetable 11 Dec 2026</div>
+</div>
+
     <div class="gallery">
       <a class="photo" target="_blank" href="https://www.viewland.jp/en/">
         <img loading="lazy" src="https://my10.jp/images/kasamatsu-park-01.jpg" alt="Amanohashidate">
@@ -458,6 +702,83 @@
       </aside>
     </div>
   
+
+    <div class="deepdetail">
+      <div class="time">16:55 • DAY 7 HIGHLIGHT</div>
+      <h3>💜 AONIYOSHI Photo Feature — Kyoto → Osaka-Namba</h3>
+      <p>นี่คือหนึ่งใน <span class="highlight">highlight ของทริป</span> เราจะนั่ง Kintetsu Sightseeing Limited Express AONIYOSHI จาก Kyoto ไป Osaka-Namba โดยรถวิ่งผ่าน Nara แต่ <b>เราไม่ลง Nara</b></p>
+
+      <div class="photo3">
+        <img loading="lazy" src="https://images.openai.com/static-rsc-4/0RTVCDbMbguQZ2c_j5qnM6sZO7cT_2L7sDUChKiIXLz7mXhitG87PN8_dxBEZQdJH0RykJ8AdvuU88mIbDSHF3QjCwfiq0n7Bpmeg5KUpgj5kLxCl9P_xZGlxogHxGOQNH328F1Oq3cQNfZNu6syZsl07exkPoB_tqqTvUMfX7hOQMvY5rl8wsEQo-VkyrSc?purpose=fullsize" alt="AONIYOSHI sightseeing train">
+        <img loading="lazy" src="https://images.openai.com/static-rsc-4/G2XYkIQ0FHG9UviE07S010oQA_6uk43lIWGcB8eHDOw_W_HSN5ACtXi5KfW51gZEQFby1XMt6T-d8DX1vqYiyYsG7n1_UVJHalpdBSPpP0vY9B3S7ftdKhDrOwWssCWa7bJEqDksUbIqoK1PkboWU3zt0ymtIrmfEP2d4GGJ-nUAbdFJkqpkPxvnhNnGyIKC?purpose=fullsize" alt="AONIYOSHI interior">
+        <img loading="lazy" src="https://images.openai.com/static-rsc-4/8PWjRcH-rv2gPnCiad04TzNlSh54ds7vBz5-bPZK6Axieg9PirhY0CD7xycb_NclBpa30hAoOhWPA7bqe-xOfsvwvX5XHSZseV-zXCxjp76csrgbgNVBhw5D87uTmcLNvcZiOlVUczkes9J-Y1teBqzOQcVkkpGhf8wtRi3INPzZLMy3oKFPItFAdveeB2KF?purpose=fullsize" alt="AONIYOSHI train experience">
+      </div>
+
+      <h4>🚆 เส้นทางที่เรานั่ง</h4>
+      <div class="journey">
+        <div class="stop">16:55 — Kyoto</div><div class="down">↓ AONIYOSHI</div>
+        <div class="stop">17:28 — Kintetsu-Nara</div>
+        <p><b>❗ไม่ต้องลงรถ</b> — นั่งอยู่บนขบวนเดิม รถจอดช่วงสั้น ๆ แล้วเดินทางต่อ</p>
+        <div class="stop">17:34 — ออกจาก Kintetsu-Nara</div><div class="down">↓</div>
+        <div class="stop">18:06 — Tsuruhashi</div><div class="down">↓</div>
+        <div class="stop">18:08 — Osaka-Uehommachi</div><div class="down">↓</div>
+        <div class="stop">18:12 — Osaka-Namba</div>
+      </div>
+      <p>จึงได้ experience เต็มเส้นทาง <b>Kyoto → Nara → Osaka</b> โดยไม่ต้องเสียเวลาเที่ยว Nara เพิ่มอีกหนึ่งวัน</p>
+
+      <h4>🎫 ก่อนขึ้นรถ</h4>
+      <p>หลังกลับจาก THISIS SHIZEN ให้กลับ Kyoto Station รับกระเป๋าที่โรงแรม แล้วเดินไป <b>Kintetsu Kyoto Station</b> โดยตั้งเป้าถึงสถานีก่อนรถออกอย่างน้อย 30 นาที เพราะ AONIYOSHI เป็นรถไฟที่ต้องจองที่นั่ง</p>
+
+      <h4>🏨 เมื่อถึง Osaka-Namba</h4>
+      <p>ลงที่ <b>Osaka-Namba Station</b> พร้อมกระเป๋า จากนั้นเดินผ่านทางใต้ดิน Namba Walk ไปทาง Nankai / Takashimaya แล้วเดินต่อไปโรงแรมแนะนำ <b>Hiyori Hotel Osaka Namba Station</b> ใช้เวลาประมาณ 10–15 นาที</p>
+
+      <div class="note"><b>ต้องตรวจอีกครั้ง:</b> เวลา 16:55 → 18:12 ใช้เป็น planning reference จาก timetable ปัจจุบัน ตารางเดินรถและ operation calendar สำหรับ <b>Saturday 12 Dec 2026</b> ต้องตรวจอีกครั้งเมื่อเปิดจองจริง</div>
+      <a class="official" target="_blank" href="https://www.kintetsu.co.jp/foreign/thai/aoniyoshi/">AONIYOSHI Official Information ↗</a>
+    </div>
+
+
+<div class="fullguide">
+  <h3>Day 7 ฉบับละเอียด • Uji → THISIS SHIZEN → AONIYOSHI → Namba</h3>
+  <div class="segment"><div class="segtime">08:00 • CHECK-OUT KYOTO</div>
+    <p>Check-out แต่ <b>ฝากกระเป๋าใหญ่ไว้ที่โรงแรม</b> เอา day bag ไป Uji เพื่อไม่ต้องลากกระเป๋าเที่ยว</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 08:10–08:40 • KYOTO → UJI</div>
+    <div class="transport">JR Kyoto Station → <b>JR Nara Line</b> → <b>JR Uji Station</b><br>Rapid ประมาณ 20 นาที; Local จะนานกว่า</div>
+    <p>ใช้ JR Uji ไม่ใช้ Keihan Uji เพราะขากลับต้องกลับ Kyoto Station รับกระเป๋า</p>
+  </div>
+  <div class="segment"><div class="segtime">09:00–10:15 • BYODOIN</div>
+    <p>จาก JR Uji เดิน 10–15 นาทีไป <b>Byodoin</b> เที่ยว Phoenix Hall, pond, Hoshokan และ garden</p>
+  </div>
+  <div class="segment"><div class="segtime">10:15–12:00 • UJI WALK</div>
+    <p>Byodoin Omotesando → Uji tea / snack → Uji River / Uji Bridge → <b>Ujigami Shrine</b></p>
+  </div>
+  <div class="segment"><div class="segtime">12:00–13:00 • UJI LUNCH</div>
+    <p>กิน matcha / cha-soba / Japanese lunch แล้ว <b>เริ่มออกจาก Uji ไม่เกินประมาณ 13:00</b> เพื่อป้องกันพลาด AONIYOSHI</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 13:00–14:00 • UJI → THISIS SHIZEN</div>
+    <div class="transport">JR Uji → JR Nara Line → <b>Kyoto Station</b> → Kyoto Municipal Subway Karasuma Line K11 → <b>Karasuma Oike K08</b> → เดินไป Shinpuhkan 1F</div>
+  </div>
+  <div class="segment"><div class="segtime">14:00–15:00 • THISIS SHIZEN</div>
+    <h4>🌿 Cafe / Ice Bouquet</h4>
+    <p>พักที่ THISIS SHIZEN แล้วออกประมาณ 15:00 เพื่อกลับ Kyoto Station</p>
+  </div>
+  <div class="segment"><div class="segtime">15:00–16:20 • RETURN KYOTO + LUGGAGE</div>
+    <div class="transport">Karasuma Oike K08 → Karasuma Line → <b>Kyoto K11</b> → รับกระเป๋าที่โรงแรม → เดินไป <b>Kintetsu Kyoto Station</b></div>
+    <p>ตั้งเป้าถึง platform / boarding area ก่อนรถอย่างน้อย 30 นาที</p>
+  </div>
+  <div class="segment"><div class="segtime">16:55–18:12 • 💜 AONIYOSHI</div>
+    <h4>หนึ่งใน Highlight ของทริป</h4>
+    <div class="transport"><b>Planning timetable:</b><br>16:55 Kyoto → 17:28 Kintetsu-Nara → <b>ไม่ลง Nara</b> → 17:34 รถออกต่อ → 18:06 Tsuruhashi → 18:08 Osaka-Uehommachi → <b>18:12 Osaka-Namba</b></div>
+    <p>เราได้ experience Kyoto → Nara → Osaka เต็มเส้นทาง โดยไม่เสียวันเที่ยว Nara</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 18:12–18:40 • OSAKA-NAMBA → HOTEL</div>
+    <p>ลง <b>Kintetsu Osaka-Namba Station</b> แล้วเดินทางใต้ดิน Namba Walk ไปทาง Nankai / Takashimaya ประมาณ 10–15 นาทีถึงโรงแรม</p>
+    <p>Check-in แล้วถ้ายังมีแรงออก Dotonbori dinner แบบเบา ๆ เพราะ Day 8 จะเที่ยว Osaka city เต็มวัน</p>
+  </div>
+  <div class="sleep"><b>🏨 นอน: Osaka – Namba คืนที่ 1/2</b><br>แนะนำ Hiyori Hotel Osaka Namba Station</div>
+  <div class="reserve"><b>Priority booking:</b> AONIYOSHI • เวลา 16:55–18:12 เป็น planning reference ต้องตรวจ operation calendar และ timetable ของ Saturday 12 Dec 2026 ก่อนจอง</div>
+</div>
+
     <div class="gallery">
       <a class="photo" target="_blank" href="https://www.byodoin.or.jp/en/">
         <img loading="lazy" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80" alt="Uji Kyoto">
@@ -505,6 +826,52 @@
       </aside>
     </div>
   
+
+<div class="fullguide">
+  <h3>Day 8 ฉบับละเอียด • Osaka City + Christmas Market</h3>
+  <div class="segment"><div class="segtime">08:00–09:15 • MORNING</div>
+    <p>ตื่นประมาณ 08:00 กิน breakfast และออกโรงแรมประมาณ 09:15 วันนี้ไม่ย้ายโรงแรมและแทบทั้งหมดเป็นเดิน + Osaka Metro</p>
+  </div>
+  <div class="segment"><div class="segtime">09:15–10:15 • NAMBA YASAKA</div>
+    <h4>🦁 Hotel → Namba Yasaka Jinja</h4>
+    <p>ถ้าพัก Hiyori Hotel / Nankai Namba ให้ <b>เดินประมาณ 8–10 นาที</b> ไม่ต้องขึ้นรถไฟ</p>
+    <p>เที่ยว Ema-Den / Lion Head Stage และบริเวณศาลเจ้า 30–45 นาที ช่วงเช้าคนมักน้อยกว่าช่วงสาย</p>
+  </div>
+  <div class="segment"><div class="segtime">10:15–12:00 • NAMBA</div>
+    <p>เดินกลับ Nankai Namba → Takashimaya Osaka → Namba CITY → Namba Parks</p>
+    <p>ช่วงนี้ดูร้านก่อน ยังไม่ควรซื้อของหนักเพราะต้องถือทั้งวัน</p>
+  </div>
+  <div class="segment"><div class="segtime">12:00–13:00 • LUNCH</div>
+    <p>กินแถว Namba เลือก sushi / tempura / okonomiyaki / kushikatsu / ramen ตามคิวและความอยาก วันอาทิตย์ไม่ใส่ Hakugintei เพราะย้ายไปกิน Day 2 แล้ว</p>
+  </div>
+  <div class="segment"><div class="segtime">13:00–14:30 • ORANGE STREET</div>
+    <p>เดินจาก Namba ประมาณ 15–20 นาทีไป <b>Orange Street / Tachibana-dori</b> ดู streetwear, sneakers, select shops, interior/design และ cafe</p>
+  </div>
+  <div class="segment"><div class="segtime">14:30–15:00 • AMERIKAMURA</div>
+    <p>เดินต่อประมาณ 10 นาที → Amerikamura → Triangle Park / vintage / streetwear</p>
+  </div>
+  <div class="segment"><div class="segtime">15:00–17:00 • SHINSAIBASHI</div>
+    <p>เดิน 5 นาทีไป Shinsaibashi → Shinsaibashi PARCO → Daimaru → Shinsaibashi-suji Shopping Street แล้วค่อยเดินลงใต้ไป Dotonbori</p>
+  </div>
+  <div class="segment"><div class="segtime">17:00–18:30 • DOTONBORI</div>
+    <p>Ebisu Bridge → Glico Sign → Dotonbori River → Don Quijote → Hozenji Yokocho → Hozenji Temple</p>
+    <p>ช่วงนี้เดือนธันวาคมฟ้ามืดแล้ว เหมาะกับไฟ Dotonbori กิน street food ได้ แต่ไม่ควรกินอิ่มมากถ้าจะกินต่อที่ Christmas Market</p>
+  </div>
+  <div class="segment"><div class="segtime">18:30–18:45 • NAMBA → TENNOJI</div>
+    <div class="transport"><b>Osaka Metro Midosuji Line</b><br>Namba M20 → Daikokucho → Dobutsuen-mae → <b>Tennoji M23</b> ประมาณ 7 นาที → เดินตามป้าย Tennoji Park / Tenshiba ~5 นาที</div>
+  </div>
+  <div class="segment"><div class="segtime">19:00–20:30 • 🎄 CHRISTMAS MARKET</div>
+    <p>เป้าหมายคือ Osaka Christmas Market ที่ <b>Tenshiba</b> ถ้างานปี 2026 ประกาศจัดที่นี่และช่วงวันที่ตรงกับทริป</p>
+    <p>เดิน stalls / hot food / illumination / Christmas goods ประมาณ 1–1.5 ชั่วโมง</p>
+    <div class="warning"><b>ยังไม่ถือว่า confirmed:</b> ต้องรอ official Osaka Christmas Market 2026 ประกาศวันและสถานที่ก่อน ถ้าเปลี่ยน venue ให้ปรับเฉพาะช่วงค่ำของวันนี้</div>
+  </div>
+  <div class="segment"><div class="segtime">20:30–21:00 • RETURN NAMBA</div>
+    <div class="transport">Tennoji M23 → Midosuji Line ทาง Umeda/Shin-Osaka → <b>Namba M20</b> → เดินกลับโรงแรม</div>
+    <p>ถ้ายังมีแรงทำ last shopping รอบ Don Quijote / drugstore แล้วกลับจัดกระเป๋า</p>
+  </div>
+  <div class="sleep"><b>🏨 นอน: Osaka – Namba คืนที่ 2/2</b><br>คืนสุดท้ายของทริป</div>
+</div>
+
     <div class="gallery">
       <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Namba+Yasaka+Jinja">
         <img loading="lazy" src="https://ppap.kinto-jp.com/spots_images/1193-images/855.jpg" alt="Namba Yasaka Shrine">
@@ -555,6 +922,46 @@
       </aside>
     </div>
   
+
+<div class="fullguide">
+  <h3>Day 9 ฉบับละเอียด • Kuromon → Last Shopping → KIX → Bangkok</h3>
+  <div class="segment"><div class="segtime">08:00–09:30 • MORNING</div>
+    <p>ตื่นประมาณ 08:00 → breakfast / coffee → เก็บกระเป๋ารอบสุดท้าย แยก passport, power bank, ของใช้บนเครื่อง และเช็กน้ำหนักกระเป๋า</p>
+  </div>
+  <div class="segment"><div class="segtime">09:30 • CHECK-OUT</div>
+    <p>Check-out แต่ <b>ฝากกระเป๋าใหญ่ไว้ที่โรงแรม</b> เพื่อเดินเที่ยวช่วงเช้าแบบตัวเปล่า</p>
+  </div>
+  <div class="segment"><div class="segtime">09:30–11:30 • KUROMON</div>
+    <p>จาก Hiyori / Nankai Namba เดินประมาณ 10–15 นาทีไป <b>Kuromon Ichiba Market</b> ไม่ต้องขึ้น Metro</p>
+    <p>ใช้ Kuromon เป็น brunch: sushi / sashimi / grilled seafood / wagyu / tamagoyaki / fruit</p>
+  </div>
+  <div class="segment"><div class="segtime">11:30–13:00 • LAST SHOPPING</div>
+    <p>เดินกลับ Namba → Takashimaya / Namba CITY / Namba Parks / drugstore / Don Quijote</p>
+    <p><b>13:00 ให้จบ shopping</b> เพราะเที่ยวบินออก 17:25 และต้องเผื่อ international check-in</p>
+  </div>
+  <div class="segment"><div class="segtime">13:00–13:30 • HOTEL → NANKAI NAMBA</div>
+    <p>กลับโรงแรม รับกระเป๋า เช็ก passport แล้วเดินไป <b>Nankai Namba Station</b></p>
+    <p>ระวังชื่อสถานี: วันนี้ใช้ <b>Nankai Namba</b> ไม่ใช่ Osaka Metro Namba และไม่ใช่ Kintetsu Osaka-Namba</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 13:30–14:10 • NAMBA → KIX</div>
+    <h4>🚆 Nankai Limited Express Rapi:t</h4>
+    <div class="transport">Nankai Namba → Shin-Imamiya → Tengachaya → Sakai → Kishiwada → Izumisano → Rinku Town → <b>Kansai-Airport Station</b><br>ประมาณ 35–40 นาทีขึ้นกับขบวน</div>
+    <p>เลือก Rapi:t เพราะมี reserved seat และเหมาะกับกระเป๋าในวันกลับ</p>
+  </div>
+  <div class="segment"><div class="segtime">ประมาณ 14:10–15:30 • KIX TERMINAL 1</div>
+    <p>ลง Kansai-Airport Station → ตามป้าย <b>Terminal 1 / International Departures</b> → ดูจอหา TG673 → Thai Airways check-in → โหลดกระเป๋า → Security → Immigration</p>
+    <p>ตั้งเป้าถึงสนามบินมากกว่า 3 ชั่วโมงก่อน flight เพื่อไม่ต้องรีบ</p>
+  </div>
+  <div class="segment"><div class="segtime">15:30–16:45 • AIRSIDE</div>
+    <p>Duty Free / ของฝาก / Lounge ตามสิทธิ์ตั๋ว แล้วเริ่มเดินไป gate ประมาณ 16:40–16:45 โดยยึด boarding pass และ gate announcement เป็นหลัก</p>
+  </div>
+  <div class="segment"><div class="segtime">17:25–22:00 • ✈️ TG673</div>
+    <h4>KIX → Bangkok Suvarnabhumi</h4>
+    <p>ออก Osaka 17:25 → ถึง Bangkok 22:00 จบทริป Osaka–Kyoto 9 Days / 8 Nights</p>
+  </div>
+  <div class="sleep"><b>✈️ คืนนี้ไม่พักญี่ปุ่น — กลับ Bangkok</b></div>
+</div>
+
     <div class="gallery">
       <a class="photo" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market">
         <img loading="lazy" src="https://images.unsplash.com/photo-1554797589-7241bb691973?auto=format&fit=crop&w=1000&q=80" alt="Osaka market">
