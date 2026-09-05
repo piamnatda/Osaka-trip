@@ -30,3 +30,9 @@ window.addEventListener('beforeprint', () => {
 window.addEventListener('afterprint', () => {
   previouslyOpen.forEach(([detail, open]) => { detail.open = open; });
 });
+// Keep useful source links if an external image becomes unavailable.
+document.querySelectorAll('.trip-photo img').forEach(img => {
+  const failed = () => img.closest('.trip-photo').classList.add('image-unavailable');
+  img.addEventListener('error', failed, { once: true });
+  if (img.complete && img.naturalWidth === 0) failed();
+});
